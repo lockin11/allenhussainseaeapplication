@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - Allen Hussain</title>
+  <link rel="stylesheet" href="eaecss.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    .projects-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .project-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      background: #14142b;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+      color: #f0f8ff;
+    }
+    .project-video {
+      flex: 1 1 320px;
+      max-width: 480px;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .project-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .project-desc {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    .project-desc h3 {
+      margin-bottom: 10px;
+      color: #00ffff;
+      font-weight: 600;
+    }
+    .scroll-btn {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      background-color: #00ffff;
+      color: #0a0a23;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .scroll-btn.show {
+      opacity: 1;
+    }
+    .drive-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #00ffff;
+      color: #0a0a23;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .drive-btn:hover {
+      background: #00cccc;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .project-item {
+        flex-direction: column;
+      }
+      .project-video, .project-desc {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+    <header class="banner">
+        <div class="overlay">
+          <h1 class="main-title">Projects</h1>
+          <nav class="menu">
+
+            <a href="about.html" aria-current="page">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="acheivements.html">Achievements</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contacting.html">Contact</a>
+          </nav>
+        </div>
+      </header>
+      
+
+  <main class="projects-container">
+    <h2 style="text-align:center; color: #fff;">Python Project Demonstrations</h2>
+
+    <div class="project-item">
+      <div class="project-video">
+        <video controls muted width="640" height="360" poster="thumbnail.jpg">
+          <source src="webdev.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="project-desc">
+        <h3>Project 1: Online Grocery Website</h3>
+        <p>A fully functional website to help manage orders and allow customers to buy directly online.</p>
+      </div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-video">
+        <video controls muted width="640" height="360" poster="thumbnail.jpg">
+          <source src="0629.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="project-desc">
+        <h3>Project 2: Tic Tac Toe</h3>
+        <p>Play Tic Tac Toe with a friend. The game supports two players and ensures fair gameplay.</p>
+      </div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-video">
+        <video controls muted width="640" height="360" poster="thumbnail.jpg">
+          <source src="todolist.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="project-desc">
+        <h3>Project 3: To-Do List</h3>
+        <p>A command-line and GUI-based Python application to help manage daily tasks, including persistent storage.</p>
+      </div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-video">
+        <video controls muted width="640" height="360" poster="thumbnail.jpg">
+          <source src="addressbook.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="project-desc">
+        <h3>Project 4: Address Book</h3>
+        <p>Save, view, and manage address entries with this functional Python-based address book interface.</p>
+      </div>
+    </div>
+
+    <!-- Google Drive Button for More Projects -->
+    <div style="text-align: center; margin-top: 40px;">
+      <h3 style="color: #00ffff;">Want to see more?</h3>
+      <p style="color: #f0f8ff;">Click below to explore additional projects and code files.</p>
+      <a href="https://drive.google.com/drive/folders/1MyJ5xtss_wgeiXV5225X6gO5l5mdhh9D?usp=sharing" target="_blank" class="drive-btn">
+        📁 View All Projects on Google Drive
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Allen Hussain</p>
+    <button onclick="scrollToTop()" class="top-btn">⬆️</button>
+  </footer>
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function scrollToNext() {
+      const nextSection = document.querySelector('.projects-container');
+      if (nextSection) {
+        nextSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const scrollBtn = document.querySelector('.scroll-btn');
+        if (scrollBtn) {
+          scrollBtn.classList.add('show');
+        }
+      }, 2000);
+    });
+  </script>
+
+</body>
+</html>
