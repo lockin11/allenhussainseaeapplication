@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials - Allen Hussain</title>
+  <link rel="stylesheet" href="eaecss.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    .testimonials-container {
+      text-align: center;
+      padding: 60px 20px;
+      color: #f0f8ff;
+    }
+
+    .pdf-preview {
+      margin: 40px auto;
+      max-width: 600px;
+      background: #14142b;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+    }
+
+    .pdf-preview img {
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .pdf-preview img:hover {
+      transform: scale(1.02);
+    }
+
+    .download-btn {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 12px 25px;
+      background: #00ffff;
+      color: #0a0a23;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background: #00cccc;
+    }
+
+    /* Scroll button styling */
+    .scroll-btn {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 12px 20px;
+      background: #00ffff;
+      color: #0a0a23;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 999;
+    }
+
+    .scroll-btn.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="banner">
+    <div class="overlay">
+      <h1 class="main-title">Testimonials</h1>
+      <nav class="menu">
+        <a href="index.html" aria-current="page">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="acheivements.html">Achievements</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contacting.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="testimonials-container">
+    <h2>Teacher Testimonials and Certificates</h2>
+    <p>Click the preview to view, or download the full PDF below:</p>
+
+    <div class="pdf-preview">
+      <a href="Doc1.pdf" target="_blank">
+        <img src="doc1.png" alt="Testimonial Preview" />
+      </a>
+      <br />
+      <a href="Doc1.pdf" class="download-btn" download>⬇ Download PDF</a>
+    </div>
+
+    <div class="pdf-preview">
+      <a href="Doc2.pdf" target="_blank">
+        <img src="doc2.png" alt="Testimonial Preview" />
+      </a>
+      <br />
+      <a href="Doc2.pdf" class="download-btn" download>⬇ Download PDF</a>
+    </div>
+
+    <div class="pdf-preview">
+      <a href="Doc3.pdf" target="_blank">
+        <img src="doc3.png" alt="Testimonial Preview" />
+      </a>
+      <br />
+      <a href="Doc3.pdf" class="download-btn" download>⬇ Download PDF</a>
+    </div>
+
+    <hr style="margin: 60px auto; border-color: #00ffff; width: 60%;" />
+
+    <h2>📄 Report Cards</h2>
+    <p>These are official academic result documents. Click to view or download:</p>
+
+    <div class="pdf-preview">
+      <a href="Term1.pdf" target="_blank">
+        <img src="term1.png" alt="Report Card Preview" />
+      </a>
+      <br />
+      <a href="Term1.pdf" class="download-btn" download>⬇ Download PDF</a>
+    </div>
+
+    <div class="pdf-preview">
+      <a href="Term2.pdf" target="_blank">
+        <img src="term2.png" alt="Report Card Preview" />
+      </a>
+      <br />
+      <a href="Term2.pdf" class="download-btn" download>⬇ Download PDF</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Allen Hussain</p>
+    <button onclick="scrollToTop()" class="top-btn">⬆️</button>
+  </footer>
+
+  <script>
+    // Scroll to top of page
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    // Scroll to testimonials container
+    function scrollToNext() {
+      const nextSection = document.querySelector('.testimonials-container');
+      if (nextSection) {
+        nextSection.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        console.log('No testimonials container found!');
+      }
+    }
+
+    // Show scroll-down button after 2 seconds
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const scrollBtn = document.querySelector('.scroll-btn');
+        if (scrollBtn) {
+          scrollBtn.classList.add('show');
+        } else {
+          console.log('Scroll button not found!');
+        }
+      }, 2000);
+    });
+  </script>
+
+</body>
+</html>
