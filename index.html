@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me - Allen Hussain</title>
+  <link rel="stylesheet" href="eaecss.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    .about-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #f0f8ff;
+      text-align: center;
+    }
+
+    .about-container p {
+      background-color: #1f1e3d;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    h2 {
+      color: #00ffff;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      color: #777;
+      font-size: 0.9rem;
+      background: #0a0a23;
+      margin-top: 60px;
+    }
+
+    .top-btn {
+      cursor: pointer;
+      background: #00ffff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 8px;
+      font-weight: 600;
+      color: #0a0a23;
+      transition: background-color 0.3s ease;
+    }
+
+    .top-btn:hover {
+      background-color: #00cccc;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="banner">
+    <div class="overlay" style="padding-top: 80px;">
+      <h1 class="main-title">About Me</h1>
+      <nav class="menu">
+        <a href="index.html" aria-current="page">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="acheivements.html">Achievements</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contacting.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="about-container">
+    <h2>Who I Am</h2>
+    <p>
+      I’m Allen Hussain, a passionate tech enthusiast skilled in programming, problem-solving, and innovation. I’ve honed my abilities in Python, robotics, and web development, competing nationally at the National Youth Tech Championship—placing Top 8 in 2023 and Top 4 in 2024. Leading my Student-Initiated Learning project taught me valuable lessons in project management and teamwork.
+      <br /><br />
+      Outside of tech, I value self-improvement and creativity. I believe in the power of consistency and continuous learning, and I bring that mindset to every challenge I take on.
+    </p>
+    <p>
+      Beyond tech, I’m an athlete who enjoys basketball and volleyball. Though my school doesn’t offer CCAs for these sports, I play casually and have competed in events like the Rampage 3x3 street basketball tournament. While we didn’t place at the top, I gained experience working under pressure, making quick decisions, and communicating effectively with teammates. I’ve also earned a bronze medal in last year’s badminton interclass and a gold medal in this year’s volleyball interclass cup division.
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Allen Hussain</p>
+    <button onclick="scrollToTop()" class="top-btn">⬆️</button>
+  </footer>
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
