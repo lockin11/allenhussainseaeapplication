@@ -104,7 +104,6 @@
         <div class="overlay">
           <h1 class="main-title">Projects</h1>
           <nav class="menu">
-
             <a href="index.html" aria-current="page">About</a>
             <a href="projects.html">Projects</a>
             <a href="acheivements.html">Achievements</a>
@@ -120,8 +119,8 @@
 
     <div class="project-item">
       <div class="project-video">
-        <video controls muted width="640" height="360" poster="thumbnail.jpg">
-          <source src="webdev.mp4" type="video/mp4">
+        <video class="always-muted" controls muted playsinline preload="metadata" controlsList="nodownload noplaybackrate">
+          <source src="webdev.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -133,8 +132,8 @@
 
     <div class="project-item">
       <div class="project-video">
-        <video controls muted width="640" height="360" poster="thumbnail.jpg">
-          <source src="0629.mp4" type="video/mp4">
+        <video class="always-muted" controls muted playsinline preload="metadata" controlsList="nodownload noplaybackrate">
+          <source src="tictactoe.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -146,8 +145,8 @@
 
     <div class="project-item">
       <div class="project-video">
-        <video controls muted width="640" height="360" poster="thumbnail.jpg">
-          <source src="todolist.mp4" type="video/mp4">
+        <video class="always-muted" controls muted playsinline preload="metadata" controlsList="nodownload noplaybackrate">
+          <source src="todolist.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -159,8 +158,8 @@
 
     <div class="project-item">
       <div class="project-video">
-        <video controls muted width="640" height="360" poster="thumbnail.jpg">
-          <source src="addressbook.mp4" type="video/mp4">
+        <video class="always-muted" controls muted playsinline preload="metadata" controlsList="nodownload noplaybackrate">
+          <source src="addressbook.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -204,6 +203,18 @@
           scrollBtn.classList.add('show');
         }
       }, 2000);
+    });
+
+    // Force all videos with class 'always-muted' to be muted and volume=0
+    document.querySelectorAll('video.always-muted').forEach(video => {
+      video.volume = 0;
+      video.muted = true;
+      video.addEventListener('volumechange', () => {
+        if (video.volume !== 0) {
+          video.volume = 0;
+          video.muted = true;
+        }
+      });
     });
   </script>
 
